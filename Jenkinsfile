@@ -68,6 +68,7 @@ distributions.each { distro ->
                     buildImage.inside {
                         sh 'mv $WORKSPACE/dist/debian/*.deb $WORKSPACE'
                     }
+                    archiveArtifacts artifacts: '*.deb', allowEmptyArchive: false
                 }
             }
         }
