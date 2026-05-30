@@ -1,4 +1,5 @@
 #!/usr/bin/make -f
+include /usr/share/dpkg/architecture.mk
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 %:
@@ -7,7 +8,8 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 override_dh_auto_configure:
 	dh_auto_configure --sourcedirectory=server-core -- \
 		-DAUDIO_SHARE_STATIC_LIBCPP=OFF \
-		-DCMAKE_TOOLCHAIN_FILE=
+		-DCMAKE_TOOLCHAIN_FILE= \
+		-DCMAKE_LIBRARY_ARCHITECTURE=$(DEB_HOST_MULTIARCH)
 
 override_dh_auto_build:
 	dh_auto_build --sourcedirectory=server-core
