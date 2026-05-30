@@ -2,7 +2,7 @@
 
 // Part of https://github.com/VitexSoftware/BuildImages
 
-String[] distributions = ['debian:bookworm', 'debian:trixie', 'ubuntu:jammy', 'ubuntu:noble']
+String[] distributions = ['debian:trixie', 'ubuntu:resolute']
 
 String vendor = 'vitexsoftware'
 

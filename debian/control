@@ -5,7 +5,7 @@ Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
 Build-Depends:
  cmake,
  debhelper-compat (= 13),
- libasio-dev,
+ libasio-dev (>= 1:1.22.0),
  libcxxopts-dev,
  libpipewire-0.3-dev,
  libprotobuf-dev,
