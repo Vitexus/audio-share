@@ -26,7 +26,7 @@ endif()
 
 message(STATUS "PLATFORM_NAME ${PLATFORM_NAME}")
 
-find_package(Protobuf CONFIG REQUIRED)
+find_package(Protobuf REQUIRED)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ../protos/client.proto)
 
@@ -48,9 +48,24 @@ if(AUDIO_SHARE_STATIC_LIBCPP AND UNIX)
 	target_link_options(server-cmd PRIVATE "-static-libstdc++")
 endif()
 
-find_package(asio CONFIG REQUIRED)
-find_package(spdlog CONFIG REQUIRED)
-find_package(cxxopts CONFIG REQUIRED)
+# asio: header-only; system libasio-dev may not provide cmake config on all distros
+find_path(ASIO_INCLUDE_DIR asio.hpp REQUIRED)
+if(NOT TARGET asio::asio)
+	add_library(asio::asio INTERFACE IMPORTED)
+	target_include_directories(asio::asio INTERFACE ${ASIO_INCLUDE_DIR})
+	target_compile_definitions(asio::asio INTERFACE ASIO_STANDALONE)
+endif()
+
+find_package(spdlog REQUIRED)
+
+# cxxopts: header-only; try CONFIG then fall back to find_path
+find_package(cxxopts QUIET)
+if(NOT TARGET cxxopts::cxxopts)
+	find_path(CXXOPTS_INCLUDE_DIR cxxopts.hpp REQUIRED)
+	add_library(cxxopts::cxxopts INTERFACE IMPORTED)
+	target_include_directories(cxxopts::cxxopts INTERFACE ${CXXOPTS_INCLUDE_DIR})
+endif()
+
 target_link_libraries(server-cmd PRIVATE asio::asio spdlog::spdlog protobuf::libprotobuf cxxopts::cxxopts)
 
 if(${PLATFORM_NAME} STREQUAL "linux")
