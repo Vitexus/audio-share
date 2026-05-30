@@ -1,0 +1,565 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: audio-share
+Upstream-Contact: <preferred name and address to reach the upstream project>
+Source: <url://example.com>
+#
+# Please double check copyright with the licensecheck(1) command.
+
+Files:     .github/ISSUE_TEMPLATE/bug_report.md
+           .github/ISSUE_TEMPLATE/feature_request.md
+           .github/workflows/build-server-core-linux.yml
+           .github/workflows/release.yml
+           .github/workflows/test.yml
+           .github/workflows/update_sourceforge.yml
+           .gitignore
+           VERSION
+           android-app/.gitignore
+           android-app/.idea/.gitignore
+           android-app/app/.gitignore
+           android-app/app/proguard-rules.pro
+           android-app/app/src/androidTest/java/io/github/mkckr0/audio_share_app/ExampleInstrumentedTest.kt
+           android-app/app/src/main/ic_launcher-playstore.png
+           android-app/app/src/main/res/drawable/artwork.png
+           android-app/app/src/main/res/mipmap-hdpi/ic_launcher.webp
+           android-app/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp
+           android-app/app/src/main/res/mipmap-mdpi/ic_launcher.webp
+           android-app/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp
+           android-app/app/src/main/res/mipmap-xhdpi/ic_launcher.webp
+           android-app/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp
+           android-app/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp
+           android-app/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp
+           android-app/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
+           android-app/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
+           android-app/app/src/main/res/resources.properties
+           android-app/app/src/test/java/io/github/mkckr0/audio_share_app/UtilTest.kt
+           android-app/build.gradle.kts
+           android-app/gradle.properties
+           android-app/gradle/libs.versions.toml
+           android-app/gradle/wrapper/gradle-wrapper.jar
+           android-app/gradle/wrapper/gradle-wrapper.properties
+           android-app/gradlew.bat
+           android-app/settings.gradle.kts
+           docs/img/win_01.png
+           docs/img/win_02.png
+           docs/protocol.md
+           metadata/en-US/changelogs/10.txt
+           metadata/en-US/changelogs/1000.txt
+           metadata/en-US/changelogs/11.txt
+           metadata/en-US/changelogs/12.txt
+           metadata/en-US/changelogs/13.txt
+           metadata/en-US/changelogs/14.txt
+           metadata/en-US/changelogs/15.txt
+           metadata/en-US/changelogs/16.txt
+           metadata/en-US/changelogs/17.txt
+           metadata/en-US/changelogs/2.txt
+           metadata/en-US/changelogs/2000.txt
+           metadata/en-US/changelogs/2001.txt
+           metadata/en-US/changelogs/2002.txt
+           metadata/en-US/changelogs/3.txt
+           metadata/en-US/changelogs/3000.txt
+           metadata/en-US/changelogs/3001.txt
+           metadata/en-US/changelogs/3002.txt
+           metadata/en-US/changelogs/3003.txt
+           metadata/en-US/changelogs/3004.txt
+           metadata/en-US/changelogs/4.txt
+           metadata/en-US/changelogs/5.txt
+           metadata/en-US/changelogs/9.txt
+           metadata/en-US/full_description.txt
+           metadata/en-US/images/icon.png
+           metadata/en-US/images/phoneScreenshots/1.png
+           metadata/en-US/images/phoneScreenshots/2.png
+           metadata/en-US/images/phoneScreenshots/3.png
+           metadata/en-US/images/phoneScreenshots/4.png
+           metadata/en-US/images/phoneScreenshots/5.png
+           metadata/en-US/short_description.txt
+           metadata/en-US/title.txt
+           scripts/apply_version.sh
+           scripts/get_version.sh
+           scripts/setup_sourceforge_release.sh
+           server-core/.clang-format
+           server-core/.gitignore
+           server-core/CMakeLists.txt
+           server-core/CMakePresets.json
+           server-core/pack.sh
+           server-core/src/audio_manager.cpp
+           server-core/src/config.h.in
+           server-core/src/main.cpp
+           server-mfc/.gitignore
+           server-mfc/audio-share-server.sln
+           server-mfc/audio-share-server/AppMsg.h
+           server-mfc/audio-share-server/AudioShareServer.rc
+           server-mfc/audio-share-server/CAboutDialog.cpp
+           server-mfc/audio-share-server/CAboutDialog.h
+           server-mfc/audio-share-server/CAppSettingsTabPanel.cpp
+           server-mfc/audio-share-server/CAppSettingsTabPanel.h
+           server-mfc/audio-share-server/CServerTabPanel.cpp
+           server-mfc/audio-share-server/CServerTabPanel.h
+           server-mfc/audio-share-server/CTabPanel.cpp
+           server-mfc/audio-share-server/CTabPanel.h
+           server-mfc/audio-share-server/audio-share-server.vcxproj.filters
+           server-mfc/audio-share-server/i18n/.gitignore
+           server-mfc/audio-share-server/i18n/generate_rc.py
+           server-mfc/audio-share-server/i18n/strings.csv
+           server-mfc/audio-share-server/res/AudioShareServer.bmp
+           server-mfc/audio-share-server/res/AudioShareServer.ico
+           server-mfc/audio-share-server/res/make_bmp.bat
+           server-mfc/audio-share-server/res/make_ico.bat
+           server-mfc/audio-share-server/resource.h
+           server-mfc/audio-share-server/util.cpp
+           server-mfc/audio-share-server/util.hpp
+           server-mfc/unit-test/pch.cpp
+           server-mfc/unit-test/pch.h
+           server-mfc/unit-test/unit-test.cpp
+           server-mfc/unit-test/unit-test.vcxproj.filters
+Copyright: __NO_COPYRIGHT_NOR_LICENSE__
+License:   __NO_COPYRIGHT_NOR_LICENSE__
+
+Files:     README.md
+           android-app/app/build.gradle.kts
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/model/Constants.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/model/ContextUtil.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/model/DataStore.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/model/HttpData.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/model/PreferenceKeys.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/model/Util.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/service/AudioPlayer.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/service/BootReceiver.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/service/BootService.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/service/NetClient.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/service/NetworkIO.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/service/PlaybackService.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/service/QsTileService.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/MainActivity.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/base/Config.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/base/EditTextPreference.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/base/Preference.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/base/SwitchPreference.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/screen/AudioScreen.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/screen/HomeScreen.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/screen/HomeScreenViewModel.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/screen/MainScreen.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/screen/SettingsScreen.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/theme/AppThemeViewModel.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/theme/Theme.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/ui/theme/Type.kt
+           android-app/app/src/main/java/io/github/mkckr0/audio_share_app/worker/UpdateWorker.kt
+           protos/client.proto
+           server-core/src/audio_manager.hpp
+           server-core/src/formatter.hpp
+           server-core/src/linux/audio_manager_impl.cpp
+           server-core/src/linux/audio_manager_impl.hpp
+           server-core/src/network_manager.cpp
+           server-core/src/network_manager.hpp
+           server-core/src/pre_asio.hpp
+           server-core/src/win32/audio_manager_impl.cpp
+           server-core/src/win32/audio_manager_impl.hpp
+           server-mfc/audio-share-server/AudioShareServer.h
+           server-mfc/audio-share-server/framework.h
+           server-mfc/audio-share-server/targetver.h
+Copyright: 2022-2024 mkckr0 <https://github.com/mkckr0>
+License:   Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ ```
+ .
+ On Debian systems, the complete text of the Apache License Version 2.0
+  can be found in `/usr/share/common-licenses/Apache-2.0'.
+
+Files:     server-mfc/audio-share-server/AudioShareServer.cpp
+Copyright: 2022-2024 mkckr0 <https://github.com/mkckr0>
+License:   Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ audio-share-server.cpp : Defines the class behaviors for the application.
+ .
+ On Debian systems, the complete text of the Apache License Version 2.0
+  can be found in `/usr/share/common-licenses/Apache-2.0'.
+
+Files:     server-mfc/audio-share-server/CMainDialog.h
+Copyright: 2022-2024 mkckr0 <https://github.com/mkckr0>
+License:   Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ audio-share-serverDlg.h : header file
+ .
+ On Debian systems, the complete text of the Apache License Version 2.0
+  can be found in `/usr/share/common-licenses/Apache-2.0'.
+
+Files:     server-mfc/audio-share-server/pch.h
+Copyright: 2022-2024 mkckr0 <https://github.com/mkckr0>
+License:   Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+ .
+ On Debian systems, the complete text of the Apache License Version 2.0
+  can be found in `/usr/share/common-licenses/Apache-2.0'.
+
+Files:     android-app/gradlew
+Copyright: 2015-2021 the original authors.
+License:   Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ https://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ SPDX-License-Identifier: Apache-2.0
+ .
+ Gradle start up script for POSIX generated by Gradle.
+ .
+ Important for running:
+ .
+ (1) You need a POSIX-compliant shell to run this script. If your /bin/sh is
+ noncompliant, but you have some other compliant shell such as ksh or
+ bash, then to run this script, type that shell name before the whole
+ command line, like:
+ .
+ ksh Gradle
+ .
+ Busybox and similar reduced shells will NOT work, because this script
+ requires all of these POSIX shell features:
+ * functions;
+ * expansions «$var», «${var}», «${var:-default}», «${var+SET}»,
+ «${var#prefix}», «${var%suffix}», and «$( cmd )»;
+ * compound commands having a testable exit status, especially «case»;
+ * various built-in commands including «command», «set», and «ulimit».
+ .
+ Important for patching:
+ .
+ (2) This script targets any POSIX shell, so it avoids extensions provided
+ by Bash, Ksh, etc; in particular arrays are avoided.
+ .
+ The "traditional" practice of packing multiple parameters into a
+ space-separated string is a well documented source of bugs and security
+ problems, so this is (mostly) avoided, by progressively accumulating
+ options in "$@", and eventually passing that to Java.
+ .
+ On Debian systems, the complete text of the Apache License Version 2.0
+  can be found in `/usr/share/common-licenses/Apache-2.0'.
+
+Files:     server-mfc/audio-share-server/CMainDialog.cpp
+Copyright: 2022-2024 mkckr0 <https://github.com/mkckr0>
+License:   Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ audio-share-serverDlg.cpp : implementation file
+ .
+ On Debian systems, the complete text of the Apache License Version 2.0
+  can be found in `/usr/share/common-licenses/Apache-2.0'.
+
+Files:     server-mfc/audio-share-server/pch.cpp
+Copyright: 2022-2024 mkckr0 <https://github.com/mkckr0>
+License:   Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+ .
+ // pch.cpp: 与预编译标头对应的源文件
+ .
+ #include "pch.h"
+ .
+ // 当使用预编译的头时，需要使用此源文件，编译才能成功。
+ .
+ int dpToPx(int dp)
+ {
+ .
+ On Debian systems, the complete text of the Apache License Version 2.0
+  can be found in `/usr/share/common-licenses/Apache-2.0'.
+
+#----------------------------------------------------------------------------
+# xml and html files (skipped):
+#         android-app/.idea/copyright/profiles_settings.xml
+#         android-app/.idea/copyright/Apache_License.xml
+#         android-app/.idea/scopes/Source_Code.xml
+#         android-app/app/src/main/AndroidManifest.xml
+#         android-app/app/src/main/res/values-zh-rCN/strings.xml
+#         android-app/app/src/main/res/values/themes.xml
+#         android-app/app/src/main/res/values/strings.xml
+#         android-app/app/src/main/res/values/ic_launcher_background.xml
+#         android-app/app/src/main/res/values/colors.xml
+#         android-app/app/src/main/res/values/values.xml
+#         android-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+#         android-app/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+#         android-app/app/src/main/res/xml/data_extraction_rules.xml
+#         android-app/app/src/main/res/xml/backup_rules.xml
+#         android-app/app/src/main/res/drawable-v24/github_mark.xml
+#         android-app/app/src/main/res/drawable/play_circle_white.xml
+#         android-app/app/src/main/res/drawable/baseline_update.xml
+#         android-app/app/src/main/res/drawable/github_mark.xml
+#         android-app/app/src/main/res/drawable/github_mark_white.xml
+#         android-app/app/src/main/res/drawable/ic_launcher_foreground.xml
+#         server-mfc/unit-test/unit-test.vcxproj
+#         server-mfc/audio-share-server/audio-share-server.vcxproj
+#         server-mfc/audio-share-server/settings.props
+
+#----------------------------------------------------------------------------
+# Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
+# license/copyright files.
+
+#----------------------------------------------------------------------------
+# License file: LICENSE
+                                  Apache License
+                            Version 2.0, January 2004
+                         http://www.apache.org/licenses/
+ .
+    TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+ .
+    1. Definitions.
+ .
+       "License" shall mean the terms and conditions for use, reproduction,
+       and distribution as defined by Sections 1 through 9 of this document.
+ .
+       "Licensor" shall mean the copyright owner or entity authorized by
+       the copyright owner that is granting the License.
+ .
+       "Legal Entity" shall mean the union of the acting entity and all
+       other entities that control, are controlled by, or are under common
+       control with that entity. For the purposes of this definition,
+       "control" means (i) the power, direct or indirect, to cause the
+       direction or management of such entity, whether by contract or
+       otherwise, or (ii) ownership of fifty percent (50%) or more of the
+       outstanding shares, or (iii) beneficial ownership of such entity.
+ .
+       "You" (or "Your") shall mean an individual or Legal Entity
+       exercising permissions granted by this License.
+ .
+       "Source" form shall mean the preferred form for making modifications,
+       including but not limited to software source code, documentation
+       source, and configuration files.
+ .
+       "Object" form shall mean any form resulting from mechanical
+       transformation or translation of a Source form, including but
+       not limited to compiled object code, generated documentation,
+       and conversions to other media types.
+ .
+       "Work" shall mean the work of authorship, whether in Source or
+       Object form, made available under the License, as indicated by a
+       copyright notice that is included in or attached to the work
+       (an example is provided in the Appendix below).
+ .
+       "Derivative Works" shall mean any work, whether in Source or Object
+       form, that is based on (or derived from) the Work and for which the
+       editorial revisions, annotations, elaborations, or other modifications
+       represent, as a whole, an original work of authorship. For the purposes
+       of this License, Derivative Works shall not include works that remain
+       separable from, or merely link (or bind by name) to the interfaces of,
+       the Work and Derivative Works thereof.
+ .
+       "Contribution" shall mean any work of authorship, including
+       the original version of the Work and any modifications or additions
+       to that Work or Derivative Works thereof, that is intentionally
+       submitted to Licensor for inclusion in the Work by the copyright owner
+       or by an individual or Legal Entity authorized to submit on behalf of
+       the copyright owner. For the purposes of this definition, "submitted"
+       means any form of electronic, verbal, or written communication sent
+       to the Licensor or its representatives, including but not limited to
+       communication on electronic mailing lists, source code control systems,
+       and issue tracking systems that are managed by, or on behalf of, the
+       Licensor for the purpose of discussing and improving the Work, but
+       excluding communication that is conspicuously marked or otherwise
+       designated in writing by the copyright owner as "Not a Contribution."
+ .
+       "Contributor" shall mean Licensor and any individual or Legal Entity
+       on behalf of whom a Contribution has been received by Licensor and
+       subsequently incorporated within the Work.
+ .
+    2. Grant of Copyright License. Subject to the terms and conditions of
+       this License, each Contributor hereby grants to You a perpetual,
+       worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+       copyright license to reproduce, prepare Derivative Works of,
+       publicly display, publicly perform, sublicense, and distribute the
+       Work and such Derivative Works in Source or Object form.
+ .
+    3. Grant of Patent License. Subject to the terms and conditions of
+       this License, each Contributor hereby grants to You a perpetual,
+       worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+       (except as stated in this section) patent license to make, have made,
+       use, offer to sell, sell, import, and otherwise transfer the Work,
+       where such license applies only to those patent claims licensable
+       by such Contributor that are necessarily infringed by their
+       Contribution(s) alone or by combination of their Contribution(s)
+       with the Work to which such Contribution(s) was submitted. If You
+       institute patent litigation against any entity (including a
+       cross-claim or counterclaim in a lawsuit) alleging that the Work
+       or a Contribution incorporated within the Work constitutes direct
+       or contributory patent infringement, then any patent licenses
+       granted to You under this License for that Work shall terminate
+       as of the date such litigation is filed.
+ .
+    4. Redistribution. You may reproduce and distribute copies of the
+       Work or Derivative Works thereof in any medium, with or without
+       modifications, and in Source or Object form, provided that You
+       meet the following conditions:
+ .
+       (a) You must give any other recipients of the Work or
+           Derivative Works a copy of this License; and
+ .
+       (b) You must cause any modified files to carry prominent notices
+           stating that You changed the files; and
+ .
+       (c) You must retain, in the Source form of any Derivative Works
+           that You distribute, all copyright, patent, trademark, and
+           attribution notices from the Source form of the Work,
+           excluding those notices that do not pertain to any part of
+           the Derivative Works; and
+ .
+       (d) If the Work includes a "NOTICE" text file as part of its
+           distribution, then any Derivative Works that You distribute must
+           include a readable copy of the attribution notices contained
+           within such NOTICE file, excluding those notices that do not
+           pertain to any part of the Derivative Works, in at least one
+           of the following places: within a NOTICE text file distributed
+           as part of the Derivative Works; within the Source form or
+           documentation, if provided along with the Derivative Works; or,
+           within a display generated by the Derivative Works, if and
+           wherever such third-party notices normally appear. The contents
+           of the NOTICE file are for informational purposes only and
+           do not modify the License. You may add Your own attribution
+           notices within Derivative Works that You distribute, alongside
+           or as an addendum to the NOTICE text from the Work, provided
+           that such additional attribution notices cannot be construed
+           as modifying the License.
+ .
+       You may add Your own copyright statement to Your modifications and
+       may provide additional or different license terms and conditions
+       for use, reproduction, or distribution of Your modifications, or
+       for any such Derivative Works as a whole, provided Your use,
+       reproduction, and distribution of the Work otherwise complies with
+       the conditions stated in this License.
+ .
+    5. Submission of Contributions. Unless You explicitly state otherwise,
+       any Contribution intentionally submitted for inclusion in the Work
+       by You to the Licensor shall be under the terms and conditions of
+       this License, without any additional terms or conditions.
+       Notwithstanding the above, nothing herein shall supersede or modify
+       the terms of any separate license agreement you may have executed
+       with Licensor regarding such Contributions.
+ .
+    6. Trademarks. This License does not grant permission to use the trade
+       names, trademarks, service marks, or product names of the Licensor,
+       except as required for reasonable and customary use in describing the
+       origin of the Work and reproducing the content of the NOTICE file.
+ .
+    7. Disclaimer of Warranty. Unless required by applicable law or
+       agreed to in writing, Licensor provides the Work (and each
+       Contributor provides its Contributions) on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+       implied, including, without limitation, any warranties or conditions
+       of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+       PARTICULAR PURPOSE. You are solely responsible for determining the
+       appropriateness of using or redistributing the Work and assume any
+       risks associated with Your exercise of permissions under this License.
+ .
+    8. Limitation of Liability. In no event and under no legal theory,
+       whether in tort (including negligence), contract, or otherwise,
+       unless required by applicable law (such as deliberate and grossly
+       negligent acts) or agreed to in writing, shall any Contributor be
+       liable to You for damages, including any direct, indirect, special,
+       incidental, or consequential damages of any character arising as a
+       result of this License or out of the use or inability to use the
+       Work (including but not limited to damages for loss of goodwill,
+       work stoppage, computer failure or malfunction, or any and all
+       other commercial damages or losses), even if such Contributor
+       has been advised of the possibility of such damages.
+ .
+    9. Accepting Warranty or Additional Liability. While redistributing
+       the Work or Derivative Works thereof, You may choose to offer,
+       and charge a fee for, acceptance of support, warranty, indemnity,
+       or other liability obligations and/or rights consistent with this
+       License. However, in accepting such obligations, You may act only
+       on Your own behalf and on Your sole responsibility, not on behalf
+       of any other Contributor, and only if You agree to indemnify,
+       defend, and hold each Contributor harmless for any liability
+       incurred by, or claims asserted against, such Contributor by reason
+       of your accepting any such warranty or additional liability.
+ .
+    END OF TERMS AND CONDITIONS
+ .
+    APPENDIX: How to apply the Apache License to your work.
+ .
+       To apply the Apache License to your work, attach the following
+       boilerplate notice, with the fields enclosed by brackets "[]"
+       replaced with your own identifying information. (Don't include
+       the brackets!)  The text should be enclosed in the appropriate
+       comment syntax for the file format. We also recommend that a
+       file or class name and description of purpose be included on the
+       same "printed page" as the copyright notice for easier
+       identification within third-party archives.
+ .
+    Copyright [yyyy] [name of copyright owner]
+ .
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+ .
+        http://www.apache.org/licenses/LICENSE-2.0
+ .
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

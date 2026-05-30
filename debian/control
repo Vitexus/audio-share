@@ -1,0 +1,32 @@
+Source: audio-share
+Section: net
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ cmake,
+ debhelper-compat (= 13),
+ libasio-dev,
+ libcxxopts-dev,
+ libpipewire-0.3-dev,
+ libprotobuf-dev,
+ libspdlog-dev,
+ pkg-config,
+ protobuf-compiler,
+Standards-Version: 4.7.0
+Homepage: https://github.com/mkckr0/audio-share
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/Vitexus/audio-share.git
+Vcs-Browser: https://github.com/Vitexus/audio-share
+
+Package: audio-share
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: share Linux computer audio to Android phone over network
+ Audio Share captures the computer's audio output via PipeWire and streams
+ it over the network to an Android phone, effectively turning the phone
+ into a wireless speaker.
+ .
+ This package provides the Linux server command (as-cmd).
