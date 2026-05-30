@@ -66,7 +66,9 @@ distributions.each { distro ->
                         sh 'dch -b -v ' + buildVer  + ' "' + env.BUILD_TAG  + '"'
                         sh 'sudo apt-get update --allow-releaseinfo-change'
                         sh 'sudo chown jenkins:jenkins ..'
-                        sh 'sudo rm -rf debian/$(dpkg-parsechangelog --show-field Source)/ debian/.debhelper/ debian/tmp/'
+                        def pkgSource = sh(script: 'dpkg-parsechangelog --show-field Source', returnStdout: true).trim()
+                        assert pkgSource ==~ /^[a-z0-9][a-z0-9+\-.]+$/ : "Unexpected Source name: ${pkgSource}"
+                        sh "sudo rm -rf 'debian/${pkgSource}/' debian/.debhelper/ debian/tmp/"
                         sh '''
                             export DH_INTERNAL_BUILDDIR="/tmp/debhelper-build-''' + uniqueBuildId + '''"
                             export TMPDIR="/tmp/build-''' + uniqueBuildId + '''"
@@ -99,8 +101,9 @@ distributions.each { distro ->
                         sorted_artifacts.each { deb_file ->
                             if (deb_file.endsWith('.deb')) {
                                 def pkgName = deb_file.tokenize('/')[-1].replaceFirst(/_.*/, '')
-                                sh 'echo -e "${GREEN} installing ' + pkgName + ' on `lsb_release -sc` ${ENDCOLOR} "'
-                                sh 'sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=' + debconf_debug + ' apt-get -y install ' + pkgName
+                                assert pkgName ==~ /^[a-z0-9][a-z0-9+\-.]+$/ : "Unexpected package name: ${pkgName}"
+                                sh "echo -e \"\${GREEN} installing ${pkgName} on \$(lsb_release -sc) \${ENDCOLOR} \""
+                                sh "sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=${debconf_debug} apt-get -y install '${pkgName}'"
                             }
                         }
                     } else {
@@ -116,8 +119,9 @@ distributions.each { distro ->
                             }
                             if (debFile) {
                                 def pkgName = debFile.tokenize('/')[-1].replaceFirst(/_.*/, '')
-                                sh 'echo -e "${GREEN} installing ' + pkgName + ' on `lsb_release -sc` ${ENDCOLOR} "'
-                                sh 'sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=' + debconf_debug + ' apt-get -y install ' + pkgName
+                                assert pkgName ==~ /^[a-z0-9][a-z0-9+\-.]+$/ : "Unexpected package name: ${pkgName}"
+                                sh "echo -e \"\${GREEN} installing ${pkgName} on \$(lsb_release -sc) \${ENDCOLOR} \""
+                                sh "sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=${debconf_debug} apt-get -y install '${pkgName}'"
                             }
                         }
                     }
@@ -126,11 +130,8 @@ distributions.each { distro ->
                 stage('Archive artifacts ' + distroName ) {
                     // Only run if previous stages (Build and Test) succeeded
                     buildImage.inside {
-                        // Archive all produced artifacts listed in debian/files
-                        artifacts.each { deb_file ->
-                            println "Archiving artifact: " + deb_file
-                            archiveArtifacts artifacts: 'dist/debian/' + deb_file
-                        }
+                        // Archive all .deb artifacts produced by this build
+                        archiveArtifacts artifacts: 'dist/debian/*.deb', allowEmptyArchive: false
 
                         // Cleanup: remove any produced files named in debian/files
                         def uniqueBuildId = env.BUILD_NUMBER + '-' + distroCode + '-' + env.EXECUTOR_NUMBER
