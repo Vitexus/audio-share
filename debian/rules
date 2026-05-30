@@ -16,3 +16,7 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	dh_auto_install --sourcedirectory=server-core
+	install -Dm644 debian/audio-share.svg \
+		debian/audio-share/usr/share/icons/hicolor/scalable/apps/audio-share.svg
+	install -Dm644 debian/io.github.mkckr0.AudioShare.metainfo.xml \
+		debian/audio-share/usr/share/metainfo/io.github.mkckr0.AudioShare.metainfo.xml

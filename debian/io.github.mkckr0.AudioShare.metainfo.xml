@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="console-application">
+  <id>io.github.mkckr0.AudioShare</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>Apache-2.0</project_license>
+  <name>Audio Share</name>
+  <summary>Share Linux computer audio to Android phone over network</summary>
+  <description>
+    <p>
+      Audio Share captures the computer's audio output via PipeWire and streams
+      it over the network to an Android phone, effectively turning the phone
+      into a wireless speaker.
+    </p>
+  </description>
+  <url type="homepage">https://github.com/mkckr0/audio-share</url>
+  <icon type="stock">audio-share</icon>
+  <provides>
+    <binary>as-cmd</binary>
+  </provides>
+  <categories>
+    <category>AudioVideo</category>
+    <category>Audio</category>
+    <category>Network</category>
+  </categories>
+</component>

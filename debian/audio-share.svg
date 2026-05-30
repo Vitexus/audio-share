@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#3DDC72"/>
+  <g fill="white">
+    <!-- Left C-shape (left half of chain link) with rounded outer-left corners -->
+    <path d="M 94,135 H 298 V 203 H 128 V 309 H 298 V 377 H 94 A 34,34,0,0,1 60,343 V 169 A 34,34,0,0,1 94,135 Z"/>
+    <!-- Upper-right arch (top of right chain link half) with rounded right cap -->
+    <path d="M 308,135 H 396 A 34,34,0,0,1 396,203 H 308 Z"/>
+    <!-- Plus sign: horizontal bar -->
+    <rect x="315" y="320" width="152" height="50" rx="10"/>
+    <!-- Plus sign: vertical bar -->
+    <rect x="366" y="269" width="50" height="152" rx="10"/>
+  </g>
+</svg>
